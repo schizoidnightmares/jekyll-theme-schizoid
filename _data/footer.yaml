@@ -1,0 +1,9 @@
+# insert pages you want to appear in the footer below
+# e.g.
+# - title: Page
+#   url: /page-url/ (e.g. /terms/)
+#   target: _blank
+
+- title: GitHub
+  url: https://github.com/schizoidnightmares/jekyll-theme-schizoid
+  target: _blank

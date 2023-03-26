@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.style }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% if page.showSiteTitle and page.showPageTitle %}
+        <title>{{ page.title }} - {{ site.title }}</title>
+        {% elsif page.showSiteTitle %}
+        <title>{{ site.title }}</title>
+        {% else %}
+        <title>{{ page.title }}</title>
+        {% endif %}
+    </head>
+    {% if layout.bodyClass %}
+    <body class="{{ layout.bodyClass }}">
+    {% else %}
+    <body>
+    {% endif %}
+        {% if layout.header %}
+        {% include header.html %}
+        {% endif %}
+        {% if layout.contentClass %}
+        <div class="{{ layout.contentClass }}">
+            {{ content }}
+        </div>
+        {% else %}
+        {{ content }}
+        {% endif %}
+        {% if layout.footer %}
+        {% unless site.theme-schizoid.hideFooter %}
+        {% unless site.data.footer == empty or site.data.footer == EmptyDrop and page.updated == false and site.theme-schizoid.hideFooterCredit %}
+        {% include footer.html %}
+        {% endunless %}
+        {% endunless %}
+        {% endif %}
+    </body>
+</html>

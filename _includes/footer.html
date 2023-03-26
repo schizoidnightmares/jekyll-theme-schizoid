@@ -1,0 +1,29 @@
+<div class="footer">
+    <div class="content">
+        {% unless site.data.footer == empty or site.data.footer == EmptyDrop or page.updated == false %}
+        <ul class="info">
+            {% if page.updated %}
+            <li>updated {{ page.updated}}</li>
+            {% unless site.data.footer == empty %}
+            <li class="vertLine">|</li>
+            {% endunless %}
+            {% endif %}
+            {% unless site.data.footer == empty or site.data.footer == EmptyDrop %}
+            {% for item in site.data.footer %}
+            {% if item != site.data.footer[0] %}
+            <li class="vertLine">|</li>
+            {% endif %}
+            {% if page.url == item.url %}
+            <li class="active">{{ item.title }}</li>
+            {% else %}
+            <li><a href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+            {% endunless %}
+        </ul>
+        {% endunless %}
+        {% unless site.theme-schizoid.hideFooterCredit %}
+        <p class="footerCredit">This site uses <a href="https://github.com/schizoidnightmares/jekyll-theme-schizoid" target="_blank">jekyll-theme-schizoid</a> by Schizoid Nightmares (<a href="https://github.com/schizoidnightmares/jekyll-theme-schizoid/blob/main/LICENSE" target="_blank">MIT License</a>).</p>
+        {% endunless %}
+    </div>
+</div>
