@@ -83,6 +83,15 @@ Specify theme colours in **/_sass/main.scss** (uses the same colours as my own w
 - will display in footer if applicable
 
 ### Classes
+#### Lists
+**arrow**
+- use to highlight links on a new line (see below)
+
+```
+- Example
+{: .arrow}
+```
+
 #### Tables
 **tableOverflow**
 - wrap tables in a div with this class to add scrollbars
