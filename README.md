@@ -21,40 +21,104 @@ I use this theme for my [Jekyll](https://neocities.org/)-built websites hosted o
 - supports up to four headings (dynamic spacing)
 - no trackers or cookies
 
-### Layouts
-- **default**: master layout
-- **page**: default layout for pages
-- **error**: for error pages (e.g. 404)
-    - create error pages as **markdown files** (e.g. **404.md**) in the base directory of your site
-    - specify **permalink** in front matter as **.html**
-        - e.g. **permalink: 404.html**
-    - recommend including **sitemap: false** in front matter (you do not need error pages in your sitemap)
-- **home**: home landing page
-- **landing**: other landing page
-- **blog**: blog with paginated posts
-- **post**: blog post
-
 ### Customization
 Under **theme-schizoid** in **_config.yaml**:
-- **hideFooter** (default: false)
-    - **true**: hides the footer
-    - **false**: shows the footer
-- **hideFooterCredit** (default: false)
-    - **true**: hides the theme credit in the footer (please provide attribution elsewhere in an easy and clear-to-find area of your site)
-    - **false**: shows the theme credit in the footer
+
+**hideFooter** (default: false)
+- **true**: hides the footer
+- **false**: shows the footer
+
+**hideFooterCredit** (default: false)
+- **true**: hides the theme credit in the footer (please provide attribution elsewhere in an easy and clear-to-find area of your site)
+- **false**: shows the theme credit in the footer
 
 Specify theme colours in **/_sass/main.scss** (uses the same colours as my own website as the default).
 
+### Layouts
+**default**
+- master layout
+
+**page**
+- default layout for pages
+
+**error**
+- for error pages (e.g. 404)
+- create error pages as **markdown files** (e.g. **404.md**) in the base directory of your site
+- specify **permalink** in front matter as **.html**
+- e.g. **permalink: 404.html**
+- recommend including **sitemap: false** in front matter (you do not need error pages in your sitemap)
+
+**home**
+- home landing page
+
+**landing**
+- other landing page
+
+**blog**
+- blog with paginated posts
+
+**post**
+- blog post
+
 ### Page front matter
-- **category** (default: news)
-    - the blog that a post is in
-- **style** (default: style.css)
-    - using directory **/assets/css/**
-- **author** (default: Schizoid Nightmares)
-    - highly recommended to change the value under **defaults** in _config.yaml for both pages and posts
-- **showSiteTitle** (default: true)
-    - **true**: displays site.title in the title of the document
-    - **false**: hides site.title in the title of the document
-- **showPageTitle** (default: true)
-    - **true**: displays page.title in the title of the document
-    - **false**: hides page.title in the title of the document
+**category** (default: news)
+- the blog that a post is in
+
+**style** (default: style.css)
+- a page's stylesheet, using directory **/assets/css/**
+
+**author** (default: Schizoid Nightmares)
+- highly recommended to change the value under **defaults** in _config.yaml for both pages and posts
+
+**showSiteTitle** (default: true)
+- **true**: displays site.title in the title of the document
+- **false**: hides site.title in the title of the document
+
+**showPageTitle** (default: true)
+- **true**: displays page.title in the title of the document
+- **false**: hides page.title in the title of the document
+
+**updated**
+- include date to indicate if the page has been updated
+- will display in footer if applicable
+
+### Classes
+#### Tables
+**tableOverflow**
+- wrap tables in a div with this class to add scrollbars
+
+```
+<div class="tableOverflow">
+    <table></table>
+</div>
+```
+
+**floatLeft**
+- floats a table to the left of text
+
+**center**
+- centre a table
+
+**small**
+- shrink table text
+
+**borderless**
+- remove borders from table
+
+**compact**
+- table does not take up full page content area width (unless its contents are large enough)
+
+#### Misc
+**hyphen**
+- forces any hyphens into non-breaking hyphens
+
+**lightText**
+- use if text is on a light background
+
+### Includes
+**colorbox.html**
+- creates a coloured box based on the color parameter
+- e.g. ```{% include colorbox.html color="white" %}```
+
+**toc.html**
+- inserts a table of contents
