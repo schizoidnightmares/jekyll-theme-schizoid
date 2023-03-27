@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 # build using: gem build jekyll-theme-schizoid.gemspec
-# publish on RubyGems using: gem push jekyll-theme-schizoid-insert.version.here.gem
+# publish on RubyGems using: gem push jekyll-theme-schizoid-0.1.1.gem
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-schizoid"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Schizoid Nightmares"]
   spec.email         = ["https://tally.so/r/mOaDRp"]
 
