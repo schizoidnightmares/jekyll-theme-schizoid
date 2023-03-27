@@ -9,10 +9,10 @@ I use this theme for my <a href="https://neocities.org/" target="_blank">Jekyll<
 ## Dependencies
 - <a href="https://github.com/jekyll/jekyll" target="_blank">jekyll</a> 4.3.1
 - <a href="https://github.com/jekyll/jekyll-feed" target="_blank">jekyll-feed</a> 0.12
-- <a href="https://github.com/sverrirs/jekyll-paginate-v2" target="_blank">jekyll-paginate-v2</a> 3.0.0+
-- <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank">jekyll-sitemap</a> 1.4.0+
-- <a href="https://github.com/jekyll/jekyll-sass-converter" target="_blank">jekyll-sass-converter</a> 3.0.0+
-- <a href="https://github.com/apsislabs/jekyll-tidy" target="_blank">jekyll-tidy</a> 0.2.2+
+- <a href="https://github.com/sverrirs/jekyll-paginate-v2" target="_blank">jekyll-paginate-v2</a> 3.0.0
+- <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank">jekyll-sitemap</a> 1.4.0
+- <a href="https://github.com/jekyll/jekyll-sass-converter" target="_blank">jekyll-sass-converter</a> 3.0.0
+- <a href="https://github.com/apsislabs/jekyll-tidy" target="_blank">jekyll-tidy</a> 0.2.2
 
 ## Install
 1. add ```gem "jekyll-theme-schizoid"``` to your Jekyll site's **Gemfile**

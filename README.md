@@ -5,10 +5,10 @@ I use this theme for my [Jekyll](https://neocities.org/)-built websites hosted o
 ## Dependencies
 - [jekyll](https://github.com/jekyll/jekyll) 4.3.1
 - [jekyll-feed](https://github.com/jekyll/jekyll-feed) 0.12
-- [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2) 3.0.0+
-- [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) 1.4.0+
-- [jekyll-sass-converter](https://github.com/jekyll/jekyll-sass-converter) 3.0.0+
-- [jekyll-tidy](https://github.com/apsislabs/jekyll-tidy) 0.2.2+
+- [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2) 3.0.0
+- [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) 1.4.0
+- [jekyll-sass-converter](https://github.com/jekyll/jekyll-sass-converter) 3.0.0
+- [jekyll-tidy](https://github.com/apsislabs/jekyll-tidy) 0.2.2
 
 ## Install
 1. add ```gem "jekyll-theme-schizoid"``` to your Jekyll site's **Gemfile**
