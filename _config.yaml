@@ -1,0 +1,61 @@
+# do not use tabs in config files!
+# recommended command when testing: bundle exec jekyll serve --livereload --drafts
+
+# jekyll config
+timezone: America/Toronto
+title: jekyll-theme-schizoid
+permalink: /:categories/:title/
+
+# jekyll-theme-schizoid config
+theme-schizoid:
+  hideFooter: false
+  hideFooterCredit: false
+
+# default front matter
+defaults:
+  -
+    scope:
+      path:
+      type: pages
+    values:
+      layout: page
+      style: style.css
+      author: Schizoid Nightmares
+      showSiteTitle: true
+      showPageTitle: true
+  -
+    scope:
+      path:
+      type: posts
+    values:
+       layout: post
+       category: news
+       style: style.css
+       author: Schizoid Nightmares
+       showSiteTitle: true
+       showPageTitle: true
+
+# kramdown       
+kramdown:
+  parse_block_html: true
+
+# sass
+sass:
+  style: compressed
+
+# pagination
+pagination:
+  enabled: true
+  per_page: 7
+  permalink: /:num/
+  title: :title
+
+# also add the plugins in the Gemfile if they have a gem
+# use gem uninstall to remove unwanted gems
+# to update the Gemfile.lock file, use the command: bundle update
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll-sitemap
+  - jekyll-sass-converter
+  - jekyll-tidy
