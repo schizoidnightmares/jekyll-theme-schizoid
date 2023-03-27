@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# build using: gem build jekyll-theme-schizoid.gemspec
+# publish on RubyGems using: gem push jekyll-theme-schizoid-insert.version.here.gem
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-schizoid"
