@@ -17,7 +17,7 @@ I use this theme for my <a href="https://neocities.org/" target="_blank">Jekyll<
 ## Install
 1. add ```gem "jekyll-theme-schizoid"``` to your Jekyll site's **Gemfile**
 1. in Terminal within your site's base folder (or OS command-line equivalent), rebuild **Gemfile.lock** using ```bundle update```
-1. add ```jekyll-theme-schizoid``` under **plugins** in **_config.yaml**
+1. add ```theme: jekyll-theme-schizoid``` in **_config.yaml**
 
 ## Features
 - for use with <a href="https://github.com/gettalong/kramdown" target="_blank">kramdown</a>
@@ -34,11 +34,11 @@ I use this theme for my <a href="https://neocities.org/" target="_blank">Jekyll<
 ### Customization
 Under **theme-schizoid** in **_config.yaml**:
 
-**hideFooter** (default: false)
+**hideFooter**
 : **true**: hides the footer
 : **false**: shows the footer
 
-**hideFooterCredit** (default: false)
+**hideFooterCredit**
 : **true**: hides the theme credit in the footer (please provide attribution elsewhere in an easy and clear-to-find area of your site)
 : **false**: shows the theme credit in the footer
 
@@ -71,20 +71,20 @@ Specify theme colours in **/_sass/main.scss** (uses the same colours as my own w
 : blog post
 
 ### Page front matter
-**category** (default: news)
+**category**
 : the blog that a post is in
 
-**style** (default: style.css)
+**style**
 : a page's stylesheet, using directory **/assets/css/**
 
-**author** (default: Schizoid Nightmares)
+**author**
 : highly recommended to change the value under **defaults** in <span class="hyphen">_config.yaml</span> for both pages and posts
 
-**showSiteTitle** (default: true)
+**showSiteTitle**
 : **true**: displays site.title in the title of the document
 : **false**: hides site.title in the title of the document
 
-**showPageTitle** (default: true)
+**showPageTitle**
 : **true**: displays page.title in the title of the document
 : **false**: hides page.title in the title of the document
 
