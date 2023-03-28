@@ -11,13 +11,15 @@
 
 @font-face {
     font-family: Lora;
-    src: url(../fonts/lora/Lora-VariableFont_wght.ttf);
+    src: url(../fonts/Lora-VariableFont_wght.ttf);
+    font-display: swap;
 }
     
 @font-face {
     font-family: Lora;
-    src: url(../fonts/lora/Lora-Italic-VariableFont_wght.ttf);
+    src: url(../fonts/Lora-Italic-VariableFont_wght.ttf);
     font-style: italic;
+    font-display: swap;
 }
 
 /* main */
