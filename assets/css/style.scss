@@ -15,6 +15,7 @@ html {
 }
 
 body {
+    opacity: 1 !important; /* helps fight against FOUC */
     margin: 0;
     color: $NV80;
     font-size: 1.9rem;

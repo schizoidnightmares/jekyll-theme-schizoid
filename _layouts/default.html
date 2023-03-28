@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-CA">
     <head>
-        <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/{{ page.style }}">
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/{{ page.style }}">
         <meta charset="UTF-8">
         <meta name="description" content="{{ page.description }}">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,9 @@
         {% endif %}
     </head>
     {% if layout.bodyClass %}
-    <body class="{{ layout.bodyClass }}">
+    <body style="opacity: 0;" class="{{ layout.bodyClass }}">
     {% else %}
-    <body>
+    <body style="opacity: 0;">
     {% endif %}
         {% if layout.header %}
         {% include header.html %}
