@@ -7,21 +7,6 @@
     font-size: 62.5%; /* sets font size to 10px default, useful with rem values */
 }
 
-/* font faces */
-
-@font-face {
-    font-family: Lora;
-    src: url(../fonts/Lora-VariableFont_wght.ttf);
-    font-display: swap;
-}
-    
-@font-face {
-    font-family: Lora;
-    src: url(../fonts/Lora-Italic-VariableFont_wght.ttf);
-    font-style: italic;
-    font-display: swap;
-}
-
 /* main */
 
 html {
@@ -38,15 +23,6 @@ body {
     letter-spacing: .02rem;
 }
 
-::selection {
-    background: $NV50;
-    color: $NV90;
-}
-
-.content {
-    width: 700px;
-}
-
 a, a:active, a:visited {
     color: $NV95;
     text-decoration: none;
@@ -60,6 +36,14 @@ a:hover {
 
 .active {
     text-decoration: underline;
+}
+::selection {
+    background: $NV50;
+    color: $NV90;
+}
+
+.content {
+    width: 700px;
 }
 
 h1 {
@@ -421,6 +405,21 @@ table {
             cursor: default;
         }
     }
+}
+
+/* font faces */
+
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora-VariableFont_wght.ttf);
+    font-display: swap;
+}
+    
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora-Italic-VariableFont_wght.ttf);
+    font-style: italic;
+    font-display: swap;
 }
 
 /* overrides */
