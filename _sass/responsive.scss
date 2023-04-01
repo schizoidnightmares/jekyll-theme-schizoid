@@ -6,10 +6,8 @@
         width: auto;
     }
     .home {
+        height: 99vh;
         padding: 0 3rem;
-        h1, .header .title {
-            line-height: 1.1;
-        }
     }
     .header {
         .content, .footer .content {
@@ -17,7 +15,6 @@
         }
         .title {
             margin: 1.5rem 0 0 0;
-            line-height: 1.2;
         }
         .nav {
             margin: .5rem 0 1.5rem 0;
@@ -42,6 +39,12 @@
     .footer {
         .content {
             align-items: center;
+        }
+        .info ~ p {
+            margin-top: 1.2rem;
+            + p {
+                margin-top: .6rem;
+            }
         }
         li {
             margin: 0 .5rem;

@@ -5,6 +5,16 @@
 timezone: America/Toronto
 title: jekyll-theme-schizoid
 permalink: /:categories/:title/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - "*.gem"
+  - "*.gemspec"
 
 # jekyll-theme-schizoid config
 theme-schizoid:
@@ -14,43 +24,41 @@ theme-schizoid:
 # default front matter
 defaults:
   -
+    values:
+      style: style.css
+      showSiteTitle: true
+      showPageTitle: true
+      display_last_modified_at: true
+  -
     scope:
-      path:
       type: pages
     values:
       layout: page
-      style: style.css
-      author: Schizoid Nightmares
-      showSiteTitle: true
-      showPageTitle: true
   -
     scope:
-      path:
       type: posts
     values:
-       layout: post
-       category: news
-       style: style.css
-       author: Schizoid Nightmares
-       showSiteTitle: true
-       showPageTitle: true
+      layout: post
+      category: blog
 
-# kramdown       
+# extras      
 kramdown:
   parse_block_html: true
-
-# sass
+  footnote_backlink: ↑
 sass:
   style: compressed
-
-# pagination
+  sourcemap: never
 pagination:
   enabled: false
   per_page: 7
   permalink: /:num/
   title: :title
+  sort_reverse: true
+feed:
+  excerpt_only: true
+  posts_limit: 7
 
-# also add the plugins in the Gemfile if they have a gem
+# also add the plugins in the .gemspec file if they have a gem
 # use gem uninstall to remove unwanted gems
 # to update the Gemfile.lock file, use the command: bundle update
 plugins:
@@ -59,3 +67,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-sass-converter
   - jekyll-tidy
+  - jekyll-last-modified-at

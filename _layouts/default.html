@@ -3,7 +3,9 @@
     <head>
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/{{ page.style }}">
         <meta charset="UTF-8">
+        {% if page.description %}
         <meta name="description" content="{{ page.description }}">
+        {% endif %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% if page.showSiteTitle and page.showPageTitle %}
         <title>{{ page.title }} - {{ site.title }}</title>
@@ -13,11 +15,10 @@
         <title>{{ page.title }}</title>
         {% endif %}
     </head>
-    {% if layout.bodyClass %}
-    <body style="opacity: 0;" class="{{ layout.bodyClass }}">
-    {% else %}
-    <body style="opacity: 0;">
-    {% endif %}
+    <body>
+        {% if layout.masterClass %}
+        <div class="{{ layout.masterClass }}">
+        {% endif %}
         {% if layout.header %}
         {% include header.html %}
         {% endif %}
@@ -30,10 +31,22 @@
         {% endif %}
         {% if layout.footer %}
         {% unless site.theme-schizoid.hideFooter %}
-        {% unless site.data.footer == empty or site.data.footer == EmptyDrop and page.updated == false and site.theme-schizoid.hideFooterCredit %}
-        {% include footer.html %}
+        {% unless site.data.footer == empty or site.data.footer == EmptyDrop and site.theme-schizoid.hideFooterCredit %}
+        {% capture pageDate %}
+        {{ page.date | date: '%B %e, %Y' }}
+        {% endcapture %}
+        {% capture lastModified %}
+        {{ page.last_modified_at | date: '%B %e, %Y' }}
+        {% endcapture %}
+        {% include footer.html
+        display_last_modified_at = page.display_last_modified_at
+        date = pageDate
+        last_modified_at = lastModified %}
         {% endunless %}
         {% endunless %}
+        {% endif %}
+        {% if layout.masterClass %}
+        </div>
         {% endif %}
     </body>
 </html>

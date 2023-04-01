@@ -11,7 +11,3 @@
 - title: RubyGems
   url: https://rubygems.org/gems/jekyll-theme-schizoid
   target: _blank
-
-- title: Security Policy
-  url: https://github.com/schizoidnightmares/jekyll-theme-schizoid/blob/master/SECURITY.md
-  target: _blank

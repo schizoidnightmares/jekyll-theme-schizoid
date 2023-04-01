@@ -1,0 +1,42 @@
+.footer {
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    width: 100%;
+    border-top: .1rem solid $NV40;
+    font-size: 1.4rem;
+    .content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        display: inline;
+        &.footerCredit {
+            font-size: 1.2rem;
+            a, a:visited, a:active, a:hover {
+                color: $NV60;
+                text-decoration: underline;
+            }
+        }
+    }
+    .info {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        text-transform: lowercase;
+        ~ p {
+            margin: 2rem 0 0 0;
+            text-indent: 0 !important;
+            + p {
+                margin-top: 1rem;
+            }
+        }
+    }
+    li {
+        margin-right: 1rem;
+        display: inline;
+        &.vertLine {
+            cursor: default;
+        }
+    }
+}

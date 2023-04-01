@@ -1,4 +1,4 @@
-# insert pages you want to appear in the footer below
+# insert pages you want to appear in the header below
 # e.g.
 # - title: Page
 #   url: /page-url/ (e.g. /terms/)
@@ -8,3 +8,7 @@
 
 - title: About
   url: /about/
+
+- title: Contact
+  url: https://tally.so/r/mOaDRp
+  target: _blank
