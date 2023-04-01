@@ -32,5 +32,5 @@ You may want to consider reading Jekyll's [official doc on installing themes](ht
 - different list types, colour boxes, individual page styles, basic SEO, table classes, and various front matter options
 
 ## Docs
-- [Official documentation](https://schizoidnightmares.com/docs/jekyll-theme-schizoid/)
-- Also consider viewing [this website's GitHub repository](https://github.com/schizoidnightmares/schizoidnightmares.com) to see how I set it up using this theme
+- [official documentation](https://schizoidnightmares.com/docs/jekyll-theme-schizoid/)
+- also consider viewing [this website's GitHub repository](https://github.com/schizoidnightmares/schizoidnightmares.com) to see how I set it up using this theme
