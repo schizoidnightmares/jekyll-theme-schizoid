@@ -60,6 +60,7 @@ feed:
 
 # also add the plugins in the .gemspec file if they have a gem
 # use gem uninstall to remove unwanted gems
+# run bundle install if adding uninstalled gems
 # to update the Gemfile.lock file, use the command: bundle update
 plugins:
   - jekyll-feed
