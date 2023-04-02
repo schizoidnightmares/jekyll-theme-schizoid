@@ -21,7 +21,7 @@ The gem should automatically install the following for you if not already:
 You may want to consider reading Jekyll's <a href="https://jekyllrb.com/docs/themes/" target="_blank">official doc on installing themes</a>.
 
 ### RubyGems
-1. Add ```gem "jekyll-theme-schizoid", "~> 1.0.0"``` to your site's Gemfile.
+1. Add ```gem "jekyll-theme-schizoid", "~> 1.0.1"``` to your site's Gemfile.
 1. Run the command ```bundle update``` in your site's directory.
 1. Add ```theme: jekyll-theme-schizoid``` to your site's _config.yaml.
 
