@@ -65,6 +65,5 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-sitemap
-  - jekyll-sass-converter
   - jekyll-tidy
   - jekyll-last-modified-at

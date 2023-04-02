@@ -23,7 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-feed", "~> 0.12"
   spec.add_runtime_dependency "jekyll-paginate-v2", "~> 3.0.0"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
-  spec.add_runtime_dependency "jekyll-sass-converter", "~> 3.0.0"
   spec.add_runtime_dependency "jekyll-tidy", "~> 0.2.2"
   spec.add_runtime_dependency "jekyll-last-modified-at", "~> 1.3.0"
 end
