@@ -20,6 +20,7 @@ a, a:active, a:visited {
     color: $NV95;
     text-decoration: none;
     transition: color .2s;
+    white-space: nowrap;
 }
 
 a:hover {
