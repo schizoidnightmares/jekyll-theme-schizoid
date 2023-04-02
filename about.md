@@ -14,7 +14,6 @@ The gem should automatically install the following for you if not already:
 - <a href="https://rubygems.org/gems/jekyll-feed" target="_blank">jekyll-feed</a> ~> 0.12
 - <a href="https://rubygems.org/gems/jekyll-paginate-v2" target="_blank">jekyll-paginate-v2</a> ~> 3.0.0
 - <a href="https://rubygems.org/gems/jekyll-sitemap" target="_blank">jekyll-sitemap</a> ~> 1.4.0
-- <a href="https://rubygems.org/gems/jekyll-sass-converter" target="_blank">jekyll-sass-converter</a> ~> 3.0.0
 - <a href="https://rubygems.org/gems/jekyll-tidy" target="_blank">jekyll-tidy</a> ~> 0.2.2
 - <a href="https://rubygems.org/gems/jekyll-last-modified-at" target="_blank">jekyll-last-modified-at</a> ~> 1.3.0
 

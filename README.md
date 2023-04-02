@@ -10,7 +10,6 @@ The gem should automatically install the following for you if not already:
 - [jekyll-feed](https://rubygems.org/gems/jekyll-feed) ~> 0.12
 - [jekyll-paginate-v2](https://rubygems.org/gems/jekyll-paginate-v2) ~> 3.0.0
 - [jekyll-sitemap](https://rubygems.org/gems/jekyll-sitemap) ~> 1.4.0
-- [jekyll-sass-converter](https://rubygems.org/gems/jekyll-sass-converter) ~> 3.0.0
 - [jekyll-tidy](https://rubygems.org/gems/jekyll-tidy) ~> 0.2.2
 - [jekyll-last-modified-at](https://rubygems.org/gems/jekyll-last-modified-at) ~> 1.3.0
 
