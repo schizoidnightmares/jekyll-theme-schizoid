@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-schizoid"
-  spec.version       = "1.0.0"
+  spec.version       = "1.0.1"
   spec.authors       = ["Schizoid Nightmares"]
   spec.email         = ["https://tally.so/r/mOaDRp"]
 
