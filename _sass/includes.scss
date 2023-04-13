@@ -1,0 +1,79 @@
+.colorbox {
+    margin-bottom: .3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: .1rem solid $NV80;
+    cursor: default;
+}
+
+// table of contents
+
+.toc {
+    padding: 1rem 2rem;
+    display: table;
+    border: .1rem solid $NV30;
+    font-size: 1.6rem;
+    background: $NV20;
+    > p {
+        margin: 0;
+        ~ ul, ~ ol {
+            margin-top: .4rem !important;
+        }
+    }
+}
+
+#markdown-toc {
+    margin-bottom: .5rem;
+}
+
+// work in progress
+.wip {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem;
+    p {
+        margin: 0;
+        &:first-of-type {
+            color: $NV70;
+        }
+        &:last-of-type {
+            text-align: right;
+        }
+    }
+    + p, + .figure + p {
+        margin-top: 0;
+    }
+}
+
+// image containers
+.figure {
+    margin: 0 auto 2rem auto;
+    color: $NV70;
+    font-size: 1.4rem;
+    overflow: hidden;
+    img {
+        max-height: 469px;
+        border: .1rem solid $NV30;
+        box-sizing: border-box;
+    }
+    &.left, &.right {
+        max-width: 280px;
+        margin-bottom: 0;
+        img {
+            max-width: inherit;
+        }
+    }
+    &.left {
+        margin-right: 2rem;
+    }
+    &.right {
+        margin-left: 2rem;
+    }
+    p {
+        margin: 0;
+    }
+}

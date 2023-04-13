@@ -1,0 +1,20 @@
+---
+layout: default
+masterClass: page
+header: true
+contentClass: content story
+footer: true
+---
+
+<h1>{% if page.titleDisplay %}{{ page.titleDisplay }}{% else %}{{ page.title }}{% endif %}</h1>
+<p>{{ page.number }} scene of {% unless page.storyNQ %}“{% endunless %}<a href="/{{ page.storyURL }}">{{ page.story }}</a>{% unless page.storyNQ %}”{% endunless %}</p>
+<hr>
+{{ content }}
+{% unless page.wip %}
+{% unless page.scene == "opening" %}
+<p class="previous"><a href="{{ page.previous_scene }}">← previous</a></p>
+{% endunless %}
+{% unless page.scene == "ending" %}
+<p class="next"><a href="{{ page.next_scene }}">next →</a></p>
+{% endunless %}
+{% endunless %}

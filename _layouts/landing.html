@@ -4,5 +4,5 @@ masterClass: landing
 contentClass: content
 ---
 
-<h1>{{ page.title }}</h1>
+<h1>{% if page.titleDisplay %}{{ page.titleDisplay }}{% else %}{{ page.title }}{% endif %}</h1>
 {{ content }}

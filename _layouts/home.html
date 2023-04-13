@@ -3,4 +3,4 @@ layout: default
 masterClass: home
 ---
 
-<h1><a href="{{ site.data.header[0].url }}">{{ page.title }}</a></h1>
+<h1><a href="{{ site.data.header[0].url }}">{% if page.titleDisplay %}{{ page.titleDisplay }}{% else %}{{ page.title }}{% endif %}</a></h1>

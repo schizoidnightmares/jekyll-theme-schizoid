@@ -1,5 +1,6 @@
 :root {
-    font-size: 62.5%; /* sets font size to 10px default, useful with rem values */
+    // sets font size to 10px default, useful with rem values
+    font-size: 62.5%;
 }
 
 html {
@@ -18,11 +19,17 @@ body {
 a, a:active, a:visited {
     color: $NV95;
     text-decoration: none;
-    white-space: nowrap;
+    img {
+        border: .1rem solid $NV95;
+        box-sizing: border-box;
+    }
 }
 
 a:hover {
     color: $NV80;
+    img {
+        border: .1rem solid $NV80;
+    }
 }
 
 .active {
@@ -39,7 +46,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, .title {
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
 h1 {
@@ -73,12 +80,6 @@ p {
     margin: 1rem 0 1.6rem 0;
     text-align: justify;
     hyphens: auto;
-    + dl {
-        margin-top: -1rem;
-    }
-    + .language-plaintext .highlight pre.highlight {
-        margin-top: -1rem;
-    }
 }
 
 sup, sub {
@@ -118,7 +119,44 @@ pre.highlight {
     }
 }
 
-/* lists */
+hr {
+    border: .1rem solid $NV30;
+    margin: 2rem 0;
+}
+
+// functional
+
+// floatLeft is legacy, remove in v2
+.left, .floatLeft {
+    float: left;
+    margin-right: 2rem;
+}
+
+.right {
+    float: right;
+    margin-left: 2rem;
+}
+
+/* use in cases where non-breaking text improves comprehension */
+.nbText {
+    white-space: nowrap;
+}
+
+.darkText {
+    color: $NV20 !important;
+}
+
+// no indent paragraph
+.nip {
+    text-indent: 0 !important;
+}
+
+// used for forcing a new line in flex containers
+.flexBreak {
+    width: 100%;
+}
+
+// lists
 
 ul.arrow {
     list-style-type: "↳";
@@ -127,7 +165,7 @@ ul.arrow {
     }
 }
 
-/* home and landing */
+// home and landing
 
 .home, .landing {
     height: 100vh;
@@ -140,130 +178,17 @@ ul.arrow {
     text-transform: uppercase;
     h1 {
         text-align: center;
-        font-size: 5.5rem;
+        font-size: 5vw;
         font-weight: 600;
         letter-spacing: .08rem;
     }
 }
 
-.landing  {
+.landing {
     flex-direction: column;
 }
 
-/* table classes */
-
-/* for scroll bars on tables, must wrap table in div */
-.tableOverflow {
-    overflow-x: auto;
-}
-
-table {
-    &.floatLeft {
-        float: left;
-        margin: 0 2rem 1rem 0;
-    }
-    &.center {
-        text-align: center !important;
-    }
-    &.small {
-        font-size: 1.4rem;
-        th, td {
-            padding: .8rem !important;
-        }
-    }
-    &.borderless {
-        th, td {
-            border: 0 !important;
-        }
-    }
-    &.compact {
-        width: auto !important;
-    }
-}
-
-/* blog */
-
-.excerpt {
-    margin-bottom: 2.4rem;
-    padding: 1.6rem 2.8rem;
-    border: .1rem solid $NV40;
-    background: $NV20;
-    h2 {
-        margin: 1rem 0 .5rem 0;
-        + p {
-            margin: 0 0 1.6rem 0;
-            color: $NV70;
-            font-size: 1.6rem;
-        }
-    }
-    p {
-        text-indent: 0 !important;
-    }
-    .readMore {
-        margin: 0 0 .7rem 0;
-        font-size: 1.6rem;
-        text-align: right;
-    }
-    + .previous, + .next {
-        font-size: 1.6rem;
-    }
-    + .next {
-        text-align: right;
-    }
-}
-
-/* toc */
-
-.toc {
-    padding: 1rem 2rem;
-    display: table;
-    border: .1rem solid $NV30;
-    font-size: 1.6rem;
-    background: $NV20;
-    > p {
-        margin: 0;
-        ~ ul, ~ ol {
-            margin-top: .4rem !important;
-        }
-    }
-}
-
-#markdown-toc {
-    margin-bottom: .5rem;
-}
-
-/* modifiers */
-
-/* use in cases where non-breaking text improves comprehension */
-.nbText {
-    white-space: nowrap;
-}
-
-.darkText {
-    color: $NV20 !important;
-}
-
-/* other includes */
-
-.colorbox {
-    margin-bottom: .3rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: inline-block;
-    vertical-align: middle;
-    border: .1rem solid $NV80;
-    cursor: default;
-}
-
-/* misc */
-
-/* used for forcing a new line in flex containers */
-.flexBreak {
-    width: 100%;
-}
-
-/* footnotes */
-
+// footnotes
 .footnotes {
     &::before {
         content: "Footnotes:";
@@ -282,7 +207,7 @@ table {
     }
 }
 
-/* font faces */
+// font faces
 
 @font-face {
     font-family: Lora;

@@ -1,0 +1,12 @@
+<div markdown="0" class="wip">
+    {% if include.data %}
+    {% assign percent = site.data.wip[include.data] %}
+    {% else %}
+    {% assign percent = include.percent %}
+    {% endif %}
+    <p>Work in progress</p>
+    <div style="background: #514346; margin: .8rem 0 .5rem 0;">
+        <div style="width: {{ percent }}%; background: #b9a7aa; margin: 0; height: 15px; cursor: default;">&nbsp;</div>
+    </div>
+    <p>{{ percent }}% complete</p>
+</div>

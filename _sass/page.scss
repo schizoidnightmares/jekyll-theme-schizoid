@@ -1,35 +1,82 @@
 .page {
     > .content {
         overflow: hidden;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto;
+        :last-child {
+            margin-bottom: 0;
+        }
         h1, h2, h3, h4 {
             + ul, + ol, + dl {
                 margin: 1rem 0 1.6rem 0;
             }
         }
-        p + p {
-        text-indent: 4rem;
+        p {
+            + p {
+                text-indent: 4rem;
+            }
+            + ul, + ol {
+                margin-top: -1rem;
+                &.arrow {
+                    margin-top: -.5rem;
+                }
+            }
         }
         ul, ol {
             text-align: justify;
             hyphens: auto;
+            &.spaced > li + li {
+                margin-top: 1rem;
+            }
+        }
+        // table classes
+        // for scroll bars on tables, must wrap table in div
+        .tableOverflow {
+            overflow-x: auto;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             text-align: left;
             hyphens: none;
+            th, td {
+                padding: 1rem;
+                border: .1rem solid $NV40;
+                vertical-align: top;
+            }
+            th {
+                background: $NV20;
+            }
+            &.center {
+                text-align: center;
+            }
+            &.small {
+                font-size: 1.4rem;
+                th, td {
+                    padding: .8rem;
+                }
+            }
+            &.borderless {
+                th, td {
+                    border: 0;
+                }
+            }
+            &.compact {
+                width: auto;
+            }
         }
-        th, td {
-            padding: 1rem;
-            border: .1rem solid $NV40;
-        }
-        th {
-            background: $NV20;
+        &.post, &.story {
+            h1 {
+                margin-bottom: .8rem;
+            }
+            + p {
+                margin: 0 0 1.6rem 0;
+                color: $NV70;
+                font-size: 1.6rem;
+            }
         }
         &.post {
             h1 {
-                margin-bottom: .5rem;
+                margin-bottom: .8rem;
                 + p {
                     margin: 0 0 1.6rem 0;
                     color: $NV70;
@@ -37,22 +84,63 @@
                     a {
                         text-transform: capitalize;
                     }
+                    + p {
+                        text-indent: 0;
+                    }
                 }
             }
-            .date, .date + p {
+        }
+        &.story {
+            h1 {
+                margin-bottom: .8rem;
+                font-weight: normal;
+                text-align: center;
+                + p {
+                    text-align: center;
+                    + hr {
+                        margin-top: 1rem;
+                    }
+                }
+            }
+            .previous {
+                float: left;
+                text-align: left;
+                &.next {
+                    float: right;
+                    text-align: right;
+                }
+            }
+        }
+        // blog excerpt
+        .excerpt {
+            margin-bottom: 2.4rem;
+            padding: 1.8rem 2.8rem 3.2rem 2.8rem;
+            border: .1rem solid $NV40;
+            background: $NV20;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h2 {
+                margin: 1rem 0 .8rem 0;
+                + p {
+                    margin: 0 0 1.6rem 0;
+                    color: $NV70;
+                    font-size: 1.6rem;
+                }
+            }
+            p {
                 text-indent: 0 !important;
             }
-        }
-    }
-    > .content {
-        p + ul, p + ol {
-            margin-top: -1rem;
-            &.arrow {
-                margin-top: -.5rem;
+            .readMore {
+                font-size: 1.6rem;
+                text-align: right;
             }
-        }
-        > ul.spaced > li + li, > ol.spaced > li + li {
-            margin-top: 1rem;
+            + .previous, + .next {
+                font-size: 1.6rem;
+            }
+            + .next {
+                text-align: right;
+            }
         }
     }
 }

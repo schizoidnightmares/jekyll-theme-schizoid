@@ -1,12 +1,17 @@
 @media only screen and (max-width: 800px) {
     :root {
-        font-size: 50%;
+        font-size: 55%;
     }
     .content {
         width: auto;
     }
+    .left, .right {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .home {
-        height: 99vh;
+        height: 98vh;
         padding: 0 3rem;
     }
     .header {
@@ -32,9 +37,18 @@
             padding: .8rem;
         }
     }
-    table.floatLeft {
-        float: none;
-        margin: 0 auto;
+    // floatLeft is legacy, remove in v2
+    table.floatLeft, table.left {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .figure {
+        &.left, &.right {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 2rem;
+        }
     }
     .footer {
         .content {

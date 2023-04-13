@@ -1,0 +1,5 @@
+{%- for item in site.data.symbols -%}
+{%- if include.symbol == item.symbol -%}
+{{ item.image }}
+{%- endif -%}
+{%- endfor -%}
