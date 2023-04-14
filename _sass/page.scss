@@ -14,17 +14,14 @@
             + p {
                 text-indent: 4rem;
             }
-            + ul, + ol {
-                margin-top: -1rem;
-                &.arrow {
-                    margin-top: -.5rem;
-                }
+            + ul, + ol, +.arrow {
+                margin-top: -.5rem;
             }
         }
         ul, ol {
             text-align: justify;
             hyphens: auto;
-            &.spaced > li + li {
+            ul, ol, &.spaced > li + li {
                 margin-top: 1rem;
             }
         }
