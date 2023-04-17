@@ -2,9 +2,6 @@
     > .content {
         overflow: hidden;
         margin: 0 auto;
-        :last-child {
-            margin-bottom: 0;
-        }
         h1, h2, h3, h4 {
             + ul, + ol, + dl {
                 margin: 1rem 0 1.6rem 0;
@@ -21,63 +18,68 @@
         ul, ol {
             text-align: justify;
             hyphens: auto;
-            ul, ol, &.spaced > li + li {
+            &.spaced > li + li {
                 margin-top: 1rem;
             }
         }
         // table classes
-        // for scroll bars on tables, must wrap table in div
-        .tableOverflow {
+        .table {
             overflow-x: auto;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: left;
-            hyphens: none;
-            th, td {
-                padding: 1rem;
-                border: .1rem solid $NV40;
-                vertical-align: top;
-            }
-            th {
-                background: $NV20;
-            }
-            &.center {
-                text-align: center;
-            }
-            &.small {
-                font-size: 1.4rem;
+            margin-bottom: 2rem;
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: left;
+                hyphens: none;
                 th, td {
-                    padding: .8rem;
+                    padding: 1rem;
+                    border: .1rem solid $color-border;
+                    vertical-align: top;
                 }
-            }
-            &.borderless {
-                th, td {
-                    border: 0;
+                th {
+                    font-size: 2.1rem;
+                    background: $color-shade;
                 }
-            }
-            &.compact {
-                width: auto;
+                &.center {
+                    text-align: center;
+                }
+                &.small {
+                    font-size: 1.4rem;
+                    th {
+                        font-size: 1.8rem;
+                    }
+                    th, td {
+                        padding: .4rem .8rem;
+                    }
+                }
+                // borderless cells
+                &.blc {
+                    border: .1rem solid $color-border;
+                }
+                &.borderless, &.blc {
+                    th, td {
+                        border: 0;
+                    }
+                }
+                &.compact {
+                    width: auto;
+                }
             }
         }
         &.post, &.story {
             h1 {
                 margin-bottom: .8rem;
-            }
-            + p {
-                margin: 0 0 1.6rem 0;
-                color: $NV70;
-                font-size: 1.6rem;
+                + p {
+                    margin: 0 0 1.6rem 0;
+                    color: $color-secondary;
+                    font-size: 1.6rem;
+                }
             }
         }
         &.post {
             h1 {
-                margin-bottom: .8rem;
                 + p {
-                    margin: 0 0 1.6rem 0;
-                    color: $NV70;
-                    font-size: 1.6rem;
+                    margin-bottom: 2rem;
                     a {
                         text-transform: capitalize;
                     }
@@ -88,16 +90,9 @@
             }
         }
         &.story {
-            h1 {
-                margin-bottom: .8rem;
+            h1, h1 + p {
                 font-weight: normal;
                 text-align: center;
-                + p {
-                    text-align: center;
-                    + hr {
-                        margin-top: 1rem;
-                    }
-                }
             }
             .previous {
                 float: left;
@@ -111,17 +106,14 @@
         // blog excerpt
         .excerpt {
             margin-bottom: 2.4rem;
-            padding: 1.8rem 2.8rem 3.2rem 2.8rem;
-            border: .1rem solid $NV40;
-            background: $NV20;
-            &:last-child {
-                margin-bottom: 0;
-            }
+            padding: 1.8rem 3.6rem;
+            border: .1rem solid $color-border;
+            background: $color-shade;
             h2 {
                 margin: 1rem 0 .8rem 0;
                 + p {
                     margin: 0 0 1.6rem 0;
-                    color: $NV70;
+                    color: $color-secondary;
                     font-size: 1.6rem;
                 }
             }

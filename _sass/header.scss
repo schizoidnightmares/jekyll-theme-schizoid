@@ -1,8 +1,9 @@
 .header {
     margin-bottom: 2.7rem;
     width: 100%;
-    border-bottom: .1rem solid $NV40;
-    background: $NV20;
+    border-bottom: .1rem solid $color-border;
+    background: $color-shade;
+    background: linear-gradient(0deg, $color-shade 0%, $color-bg 100%);
     .content {
         margin: 0 auto;
         display: flex;
@@ -23,6 +24,6 @@
         text-transform: lowercase;
     }
     li + li {
-        margin-left: 1.6rem;
+        margin-left: 1.3rem;
     }
 }

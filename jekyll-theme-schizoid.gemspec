@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-schizoid"
-  spec.version       = "1.0.1"
+  spec.version       = "2.0.0"
   spec.authors       = ["Schizoid Nightmares"]
   spec.email         = ["https://tally.so/r/mOaDRp"]
 
@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4.0"
   spec.add_runtime_dependency "jekyll-tidy", "~> 0.2.2"
   spec.add_runtime_dependency "jekyll-last-modified-at", "~> 1.3.0"
+  spec.add_runtime_dependency "jekyll-spaceship", "~> 0.10.2"
 end

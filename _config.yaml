@@ -68,3 +68,4 @@ plugins:
   - jekyll-sitemap
   - jekyll-tidy
   - jekyll-last-modified-at
+  - jekyll-spaceship

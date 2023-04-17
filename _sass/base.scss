@@ -4,12 +4,12 @@
 }
 
 html {
-    background: $NV10;
+    background: $color-bg;
 }
 
 body {
     margin: 0;
-    color: $NV80;
+    color: $color-primary;
     font-size: 1.9rem;
     font-family: Lora, serif;
     line-height: 1.6;
@@ -17,19 +17,22 @@ body {
 }
 
 a, a:active, a:visited {
-    color: $NV95;
+    color: $color-link;
     text-decoration: none;
     img {
-        border: .1rem solid $NV95;
-        box-sizing: border-box;
+        border: .1rem solid $color-link;
     }
 }
 
 a:hover {
-    color: $NV80;
+    color: $color-primary;
     img {
-        border: .1rem solid $NV80;
+        border: .1rem solid $color-secondary;
     }
+}
+
+img {
+    max-width: 100%;
 }
 
 .active {
@@ -38,15 +41,15 @@ a:hover {
 }
 
 ::selection {
-    background: $NV50;
-    color: $NV90;
+    background: $color-highlight-bg;
+    color: $color-highlight;
 }
 
 .content {
     width: 700px;
 }
 
-h1, h2, h3, h4, .title {
+h1, h2, h3, h4, th, .title {
     line-height: 1.2;
 }
 
@@ -97,8 +100,8 @@ dd {
 
 code {
     padding: .2rem;
-    background: $NV20;
-    border: .1rem solid $NV30;
+    background: $color-shade;
+    border: .1rem solid $color-border;
     border-radius: .4rem;
     font-family: Menlo, Monaco, 'Courier New', monospace;
     font-size: 1.4rem;
@@ -108,8 +111,8 @@ code {
 pre.highlight {
     padding: .9rem 1.3rem;
     overflow-x: auto;
-    background: $NV20;
-    border: .1rem solid $NV30;
+    background: $color-shade;
+    border: .1rem solid $color-border;
     font-size: 1.4rem;
     code {
         padding: 0;
@@ -121,14 +124,23 @@ pre.highlight {
 }
 
 hr {
-    border: .1rem solid $NV30;
+    border: .1rem solid $color-border;
     margin: 2rem 0;
 }
 
 // functional
 
-// floatLeft is legacy, remove in v2
-.left, .floatLeft {
+.left, .right {
+    + p {
+        margin-top: 0;
+    }
+    // fixed width
+    &.fixed {
+        width: 28rem;
+    }
+}
+
+.left {
     float: left;
     margin-right: 2rem;
 }
@@ -138,13 +150,13 @@ hr {
     margin-left: 2rem;
 }
 
-/* use in cases where non-breaking text improves comprehension */
+// use in cases where non-breaking text improves comprehension
 .nbText {
     white-space: nowrap;
 }
 
 .darkText {
-    color: $NV20 !important;
+    color: $color-shade !important;
 }
 
 // no indent paragraph
@@ -179,11 +191,11 @@ ul.arrow {
     align-items: center;
 }
 
-.home  {
+.home {
     text-transform: uppercase;
     h1 {
         text-align: center;
-        font-size: 5vw;
+        font-size: 4.5vw;
         font-weight: 600;
         letter-spacing: .08rem;
     }
@@ -201,8 +213,8 @@ ul.arrow {
     clear: both;
     margin-top: 2.5rem;
     padding-top: 2rem;
-    border-top: .1rem solid $NV40;
-    color: $NV70;
+    border-top: .1rem solid $color-border;
+    color: $color-secondary;
     font-size: 1.4rem;
     ol {
         margin: 1rem 0 1.6rem 0;

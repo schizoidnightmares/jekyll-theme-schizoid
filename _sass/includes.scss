@@ -4,7 +4,7 @@
     height: 1.5rem;
     display: inline-block;
     vertical-align: middle;
-    border: .1rem solid $NV80;
+    border: .1rem solid $color-primary;
     cursor: default;
 }
 
@@ -13,9 +13,9 @@
 .toc {
     padding: 1rem 2rem;
     display: table;
-    border: .1rem solid $NV30;
+    border: .1rem solid $color-border;
     font-size: 1.6rem;
-    background: $NV20;
+    background: $color-shade;
     > p {
         margin: 0;
         ~ ul, ~ ol {
@@ -37,35 +37,44 @@
     display: inline-block;
     font-size: 1.4rem;
     box-sizing: border-box;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     p {
         margin: 0;
         &:first-of-type {
-            color: $NV70;
+            color: $color-secondary;
         }
         &:last-of-type {
             text-align: right;
         }
     }
-    + p, + .figure + p {
-        margin-top: 0;
+    div {
+        background: $color-border;
+        margin: .8rem 0 .5rem 0;
+        div {
+            background: $color-secondary;
+            margin: 0;
+            height: 1.5rem;
+            cursor: default;
+        }
     }
 }
 
 // image containers
 .figure {
     margin: 0 auto 2rem auto;
-    color: $NV70;
+    color: $color-secondary;
     font-size: 1.4rem;
     overflow: hidden;
+    a {
+        max-width: inherit;
+    }
     img {
         max-height: 469px;
-        border: .1rem solid $NV30;
+        border: .1rem solid $color-border;
         box-sizing: border-box;
     }
     &.left, &.right {
         max-width: 280px;
-        margin-bottom: 0;
         img {
             max-width: inherit;
         }

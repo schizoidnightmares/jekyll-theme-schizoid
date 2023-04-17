@@ -1,8 +1,8 @@
 .footer {
-    margin: 4rem 0 2rem 0;
+    margin: 3rem 0;
     padding: 1.5rem 0;
     width: 100%;
-    border-top: .1rem solid $NV40;
+    border-top: .1rem solid $color-border;
     font-size: 1.4rem;
     .content {
         margin: 0 auto;
@@ -14,7 +14,7 @@
         &.footerCredit {
             font-size: 1.2rem;
             a, a:visited, a:active, a:hover {
-                color: $NV60;
+                color: $color-tertiary;
                 text-decoration: underline;
             }
         }
@@ -35,8 +35,5 @@
     li {
         margin-right: 1rem;
         display: inline;
-        &.vertLine {
-            cursor: default;
-        }
     }
 }

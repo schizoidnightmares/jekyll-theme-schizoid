@@ -4,9 +4,6 @@
         <ul class="info">
             {% unless site.data.footer == empty or site.data.footer == EmptyDrop %}
             {% for item in site.data.footer %}
-            {% if item != site.data.footer[0] %}
-            <li class="vertLine">|</li>
-            {% endif %}
             {% if page.url == item.url %}
             <li class="active">{{ item.title }}</li>
             {% else %}

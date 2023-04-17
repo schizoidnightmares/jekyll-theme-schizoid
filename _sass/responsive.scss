@@ -9,6 +9,11 @@
         float: none;
         margin-left: auto;
         margin-right: auto;
+        // fixed width
+        &.fixed {
+            max-width: 40rem;
+            width: auto;
+        }
     }
     .home {
         padding: 0 3rem;
@@ -36,12 +41,11 @@
             padding: .8rem;
         }
     }
-    // floatLeft is legacy, remove in v2
-    table.floatLeft, table.left {
-        margin-left: auto;
-        margin-right: auto;
-    }
     .figure {
+        max-width: 100%;
+        img {
+            max-width: inherit;
+        }
         &.left, &.right {
             max-width: 100%;
             margin-left: auto;
