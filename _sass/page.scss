@@ -2,7 +2,7 @@
     > .content {
         overflow: hidden;
         margin: 0 auto;
-        h1, h2, h3, h4 {
+        h1, h2, h3, h4, h5 {
             + ul, + ol, + dl {
                 margin: 1rem 0 1.6rem 0;
             }
@@ -18,14 +18,17 @@
         ul, ol {
             text-align: justify;
             hyphens: auto;
-            &.spaced > li + li {
-                margin-top: 1rem;
+            ul, ol {
+                // adds a space between two lists
+                &.margin {
+                    margin-top: 1rem;
+                }
             }
         }
         // table classes
         .table {
             overflow-x: auto;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             table {
                 width: 100%;
                 border-collapse: collapse;
@@ -37,19 +40,17 @@
                     vertical-align: top;
                 }
                 th {
-                    font-size: 2.1rem;
                     background: $color-shade;
                 }
                 &.center {
                     text-align: center;
                 }
                 &.small {
-                    font-size: 1.4rem;
-                    th {
-                        font-size: 1.8rem;
-                    }
                     th, td {
                         padding: .4rem .8rem;
+                    }
+                    td {
+                        font-size: 1.4rem;
                     }
                 }
                 // borderless cells
@@ -63,6 +64,13 @@
                 }
                 &.compact {
                     width: auto;
+                }
+                &.infobox {
+                    th, td {
+                        &[colspan="2"] {
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }

@@ -7,7 +7,7 @@
             {% if page.url == item.url %}
             <li class="active">{{ item.title }}</li>
             {% else %}
-            <li><a href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a></li>
+            <li><a href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a></li>
             {% endif %}
             {% endfor %}
             {% endunless %}

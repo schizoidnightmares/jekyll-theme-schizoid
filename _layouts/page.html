@@ -7,4 +7,17 @@ footer: true
 ---
 
 <h1>{% if page.titleDisplay %}{{ page.titleDisplay }}{% else %}{{ page.title }}{% endif %}</h1>
+{% if page.image_src %}
+{% capture image_src %}/assets/images/{{ page.image_src }}{% endcapture %}
+{% if page.image_larger %}
+{% capture image_larger %}
+{{ page.image_larger }}
+{% endcapture %}
+{% else %}
+{% assign image_larger = false %}
+{% endif %}
+{% capture image_alt %}{{ page.image_alt }}{% endcapture %}
+{% capture image_caption %}{{ page.image_caption }}{% endcapture %}
+{% include image.html larger=image_larger src=image_src alt=image_alt caption=image_caption %}
+{% endif %}
 {{ content }}

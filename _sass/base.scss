@@ -20,14 +20,14 @@ a, a:active, a:visited {
     color: $color-link;
     text-decoration: none;
     img {
-        border: .1rem solid $color-link;
+        border: .1rem solid $color-link !important;
     }
 }
 
 a:hover {
     color: $color-primary;
     img {
-        border: .1rem solid $color-secondary;
+        border: .1rem solid $color-secondary !important;
     }
 }
 
@@ -49,7 +49,7 @@ img {
     width: 700px;
 }
 
-h1, h2, h3, h4, th, .title {
+h1, h2, h3, h4, h5, th, .title {
     line-height: 1.2;
 }
 
@@ -61,9 +61,9 @@ h1 {
     }
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5 {
     margin: 2.4rem 0 1rem 0;
-    + h2, + h3, + h4 {
+    + h2, + h3, + h4, + h5 {
         margin: 1rem 0;
     }
 }
@@ -78,6 +78,11 @@ h3 {
 
 h4 {
     font-size: 2.1rem;
+}
+
+h5 {
+    font-size: 1.9rem;
+    font-weight: 600;
 }
 
 p {
@@ -170,15 +175,34 @@ hr {
 }
 
 // lists
-
-ol.lowercase {
-    list-style-type: lower-alpha;
-}
-
-ul.arrow {
-    list-style-type: "↳";
-    li {
-        padding-left: .5rem;
+ol, ul {
+    &.spaced > li + li {
+        margin-top: 1rem;
+    }
+    &.lowercase {
+        list-style-type: lower-alpha;
+    }
+    &.arrow {
+        list-style-type: "↳";
+        li {
+            padding-left: .5rem;
+        }
+    }
+    // recommend using columns2 if list is > 10 items
+    // columns3 if list is > 20 items
+    &.columns2, &.columns3 {
+        column-gap: 5rem;
+        li {
+            width: 100%;
+        }
+    }
+    &.columns2 {
+        column-count: 2;
+        font-size: 1.6rem;
+    }
+    &.columns3 {
+        column-count: 3;
+        font-size: 1.4rem;
     }
 }
 

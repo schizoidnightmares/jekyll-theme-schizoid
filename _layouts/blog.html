@@ -6,6 +6,12 @@ layout: page
 <div class="excerpt">
     <h2><a href="{{ post.url }}">{% if post.titleDisplay %}{{ post.titleDisplay }}{% else %}{{ post.title }}{% endif %}</a></h2>
     <p>{{ post.date | date: '%B %e, %Y' }}</p>
+    {% if post.image_src %}
+    {% capture image_src %}/assets/images/{{ post.image_src }}{% endcapture %}
+    {% capture image_alt %}{{ post.image_alt }}{% endcapture %}
+    {% capture image_caption %}{{ post.image_caption }}{% endcapture %}
+    {% include image.html larger=true src=image_src alt=image_alt caption=image_caption %}
+    {% endif %}
     {{ post.excerpt }}
     {% if post.content.size > post.excerpt.size %}
     <p class="readMore"><a href="{{ post.url }}">read more</a></p>
