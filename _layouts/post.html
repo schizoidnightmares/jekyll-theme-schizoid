@@ -1,8 +1,12 @@
 ---
-layout: page
+layout: default
+masterClass: page
+header: true
 contentClass: content post
+footer: true
 ---
 
+<h1>{% if page.titleDisplay %}{{ page.titleDisplay }}{% else %}{{ page.title }}{% endif %}</h1>
 <p>{{ page.date | date: '%B %e, %Y' }} — <a href="{{ site.baseurl }}/{{ page.category }}/">{{ page.category }}</a></p>
 {% if page.image_src %}
 {% capture image_src %}/assets/images/{{ page.image_src }}{% endcapture %}
