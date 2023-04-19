@@ -47,13 +47,11 @@
         }
     }
     .figure {
-        img {
-            max-width: inherit;
-        }
-        &.left, &.right {
-            max-width: 100%;
+        &.left, &.right, img {
             margin-left: auto;
             margin-right: auto;
+        }
+        &.left, &.right {
             margin-bottom: 2rem;
         }
     }
@@ -68,7 +66,15 @@
             }
         }
         li {
-            margin: 0 .5rem;
+            margin: 0 .8rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .figure {
+        &.left, &.right {
+            max-width: 100%;
         }
     }
 }
