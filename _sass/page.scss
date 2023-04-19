@@ -48,8 +48,6 @@
                 &.small {
                     th, td {
                         padding: .4rem .8rem;
-                    }
-                    td {
                         font-size: 1.4rem;
                     }
                 }
@@ -70,6 +68,9 @@
                         &[colspan="2"] {
                             text-align: center;
                         }
+                    }
+                    th {
+                        font-size: 1.9rem;
                     }
                 }
             }
