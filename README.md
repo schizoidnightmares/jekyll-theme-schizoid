@@ -17,7 +17,7 @@ The gem should automatically install the following for you if not already:
 You may want to consider reading Jekyll's [official doc on installing themes](https://jekyllrb.com/docs/themes/).
 
 ### RubyGems
-1. Add ```gem "jekyll-theme-schizoid", "~> 1.0.1"``` to your site's Gemfile.
+1. Add ```gem "jekyll-theme-schizoid", "~> 2.0.0"``` to your site's Gemfile.
 1. Run the command ```bundle install``` in your site's directory.
 1. Add ```theme: jekyll-theme-schizoid``` to your site's _config.yaml.
 
@@ -27,9 +27,11 @@ You may want to consider reading Jekyll's [official doc on installing themes](ht
     - see [their builder on Figma](https://www.figma.com/community/plugin/1034969338659738588/Material-Theme-Builder)
 - no JavaScript, cookies, or trackers
 - basic header and footer menus
-- supports up to four headings (dynamic spacing)
-- different list types, colour boxes, individual page styles, basic SEO, table classes, and various front matter options
+- story pages (with bottom navigation)
+- landing pages
+- supports up to five headings (dynamic spacing)
+- different list types, colour boxes, individual page styles, basic SEO, table classes, functional classes, and various front matter options
 
 ## Docs
 - [official documentation](https://schizoidnightmares.com/docs/jekyll-theme-schizoid/)
-- also consider viewing [this website's GitHub repository](https://github.com/schizoidnightmares/schizoidnightmares.com) to see how I set it up using this theme
+- also consider viewing [this website's GitHub repository](https://github.com/schizoidnightmares/schizoidnightmares.com) or [this one](https://github.com/schizoidnightmares/absurdrealms.com) to see how I set it up using this theme
