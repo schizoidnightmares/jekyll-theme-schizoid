@@ -181,8 +181,13 @@ hr {
 
 // lists
 ol, ul {
-    &.spaced > li + li {
-        margin-top: 1rem;
+    &.spaced {
+        > li + li {
+            margin-top: 1rem;
+        }
+        ol, ul {
+            margin-top: 1rem;
+        }
     }
     &.lowercase {
         list-style-type: lower-alpha;
