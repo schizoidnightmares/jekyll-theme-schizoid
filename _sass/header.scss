@@ -22,6 +22,8 @@
         list-style-type: none;
         font-size: 1.6rem;
         text-transform: lowercase;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     li + li {
         margin-left: 1.3rem;

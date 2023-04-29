@@ -223,20 +223,28 @@ ol, ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .home {
     text-transform: uppercase;
     h1 {
         text-align: center;
-        font-size: 4.5vw;
+        font-size: 6rem;
         font-weight: 600;
         letter-spacing: .08rem;
+        margin: 0;
     }
-}
-
-.landing {
-    flex-direction: column;
+    .nav {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        font-size: 2rem;
+        li + li {
+            margin-left: 1.3rem;
+        }
+    }
 }
 
 // footnotes

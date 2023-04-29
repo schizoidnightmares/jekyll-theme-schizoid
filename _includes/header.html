@@ -1,15 +1,6 @@
 <div class="header">
     <div class="content">
         <a href="{{ site.baseurl }}/" class="title">{{ site.title }}</a>
-        <ul class="nav">
-            {% assign activeURL = page.url | remove_first: "index.html" %}
-            {% for item in site.data.header %}
-            {% if activeURL == item.url %}
-            <li class="active">{{ item.title }}</li>
-            {% else %}
-            <li><a href="{{ item.url }}"{% if item.target %} target="{{ item.target }}"{% endif %}>{{ item.title }}</a></li>
-            {% endif %}
-            {% endfor %}
-        </ul>
+        {% include nav.html %}
     </div>
 </div>
