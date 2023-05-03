@@ -22,6 +22,7 @@
     }
     .home {
         padding: 0 3rem;
+        overflow: hidden;
         h1 {
             font-size: 4rem;
             line-height: 1.1;
@@ -54,13 +55,16 @@
             margin: 0 .8rem;
         }
     }
-    .page .content {
+    .page > .content {
         padding: 0 3rem;
         table {
             font-size: 1.4rem;
         }
         th, td {
             padding: .8rem;
+        }
+        .previous, .next {
+            font-size: 1.4rem;
         }
     }
     .figure {

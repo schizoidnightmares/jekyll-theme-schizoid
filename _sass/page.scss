@@ -79,22 +79,19 @@
             h1 {
                 margin-bottom: .8rem;
                 + p {
-                    margin: 0 0 1.6rem 0;
                     color: $color-secondary;
                     font-size: 1.6rem;
                 }
             }
         }
         &.post {
-            h1 {
+            h1 + p {
+                margin: 0 0 2rem 0;
+                a {
+                    text-transform: capitalize;
+                }
                 + p {
-                    margin-bottom: 2rem;
-                    a {
-                        text-transform: capitalize;
-                    }
-                    + p {
-                        text-indent: 0;
-                    }
+                    text-indent: 0;
                 }
             }
         }
@@ -103,14 +100,25 @@
                 font-weight: normal;
                 text-align: center;
             }
+            h1 + p {
+                margin: 0 0 1.6rem 0;
+            }
             .previous {
                 float: left;
-                text-align: left;
-                &.next {
-                    float: right;
-                    text-align: right;
-                }
             }
+            .next {
+                float: right;
+            }
+        }
+        .previous, .next, .readMore {
+            font-size: 1.6rem;
+            text-indent: 0;
+        }
+        .previous {
+            text-align: left;
+        }
+        .next, .readMore {
+            text-align: right;
         }
         // blog excerpt
         .excerpt {
@@ -128,16 +136,6 @@
             }
             p {
                 text-indent: 0 !important;
-            }
-            .readMore {
-                font-size: 1.6rem;
-                text-align: right;
-            }
-            + .previous, + .next {
-                font-size: 1.6rem;
-            }
-            + .next {
-                text-align: right;
             }
         }
     }
