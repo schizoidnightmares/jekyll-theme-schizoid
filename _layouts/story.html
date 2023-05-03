@@ -23,9 +23,9 @@ footer: true
 {% include image.html larger=image_larger src=image_src alt=image_alt caption=image_caption %}
 {% endif %}
 {{ content }}
-{% unless page.scene == "opening" %}
-<p class="previous"><a href="{{ page.previous_scene }}">← previous</a></p>
-{% endunless %}
-{% unless page.scene == "ending" or page.wip %}
-<p class="next"><a href="{{ page.next_scene }}">next →</a></p>
-{% endunless %}
+{% if page.previous_scene %}
+<p class="previous"><a href="{{ page.previous_scene }}">← previous scene</a></p>
+{% endif %}
+{% if page.next_scene %}
+<p class="next"><a href="{{ page.next_scene }}">next scene →</a></p>
+{% endif %}
