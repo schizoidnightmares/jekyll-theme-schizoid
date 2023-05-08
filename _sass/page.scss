@@ -83,6 +83,9 @@
                     font-size: 1.6rem;
                 }
             }
+            .return {
+                float: left;
+            }
         }
         &.post {
             h1 + p {
@@ -105,12 +108,16 @@
             }
             .previous {
                 float: left;
+                + .next + .return, + .return {
+                    clear: both;
+                    margin-top: 0;
+                }
             }
             .next {
                 float: right;
             }
         }
-        .previous, .next, .readMore {
+        .previous, .next, .readMore, .return {
             font-size: 1.6rem;
             text-indent: 0;
         }
