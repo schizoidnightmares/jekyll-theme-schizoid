@@ -7,7 +7,7 @@ footer: true
 ---
 
 <h1>{% if page.titleDisplay %}{{ page.titleDisplay }}{% else %}{{ page.title }}{% endif %}</h1>
-<p>{{ page.number }} scene of {% unless page.storyNQ %}"{% endunless %}<a href="/{{ page.storyURL }}">{{ page.story }}</a>{% unless page.storyNQ %}"{% endunless %}<br>Published {{ page.published }}</p>
+<p>{{ page.number }} scene of {% unless page.storyNQ %}“{% endunless %}<a href="/{{ page.storyURL }}">{{ page.story }}</a>{% unless page.storyNQ %}”{% endunless %}<br>Published {{ page.published }}</p>
 <hr>
 {% if page.image_src %}
 {% capture image_src %}/assets/images/{{ page.image_src }}{% endcapture %}
