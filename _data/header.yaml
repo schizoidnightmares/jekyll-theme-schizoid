@@ -1,14 +1,3 @@
-# insert pages you want to appear in the header below
-# e.g.
-# - title: Page
-#   url: /page-url/ (e.g. /terms/)
-#   target: _blank
-#
-# a page using the home layout links to the first listed title's url
-
-- title: About
-  url: /about/
-
 - title: Contact
   url: https://tally.so/r/mOaDRp
-  target: _blank
+  external: true

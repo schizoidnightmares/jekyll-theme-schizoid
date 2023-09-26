@@ -1,0 +1,14 @@
+<div class="gallery" markdown=0>
+    {% for item in site.data.gallery %}
+    {% if item.author == include.author %}
+    <div>
+        <a href="{{ item.src }}" target="_blank"><img src="{{ item.thumb }}"></a>
+        {% if item.url %}
+        <p class="caption"><a href="{{ item.url }}" target="_blank">{{ item.title }}</a> ({{ item.date }})</p>
+        {% else %}
+        <p class="caption">{{ item.title }} ({{ item.date }})</p>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>

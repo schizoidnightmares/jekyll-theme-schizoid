@@ -1,0 +1,28 @@
+---
+layout: base
+style: news
+---
+
+<div class="content">
+    <h1>{{ page.title }}</h1>
+    {% for post in paginator.posts %}
+    <div class="feature cropped">
+        {% if post.src-thumb %}
+        <img src="{{ post.src-thumb }}" alt="{{ post.alt }}">
+        {% endif %}
+        <div>
+            <h2 ><a href="{{ post.url }}">{% if post.custom-title %}{{ post.custom-title }}{% else %}{{ post.title }}{% endif %}</a></h2>
+            <p class="date">{{ post.date | date: '%B %e, %Y' }}</p>
+            {{ post.excerpt }}
+        </div>
+    </div>
+    {% endfor %}
+    {% if paginator.total_pages > 1 %}
+    {% if paginator.next_page %}
+    <p class="return"><a href="{{ paginator.next_page_path | prepend: site.baseurl }}">← Older</a></p>
+    {% endif %}
+    {% if paginator.previous_page %}
+    <p class="advance"><a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer →</a></p>
+    {% endif %}
+    {% endif %}
+</div>

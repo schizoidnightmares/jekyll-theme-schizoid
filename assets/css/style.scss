@@ -1,3 +1,202 @@
 ---
 ---
-@import "jekyll-theme-schizoid";
+@import 'theme.scss';
+@import 'container.scss';
+
+// Lora font face
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora-VariableFont_wght.ttf);
+    font-display: swap;
+}
+@font-face {
+    font-family: Lora;
+    src: url(../fonts/Lora-Italic-VariableFont_wght.ttf);
+    font-style: italic;
+    font-display: swap;
+}
+
+// sets font size to 10px default, useful with rem values
+:root { font-size: 62.5%; }
+
+::selection {
+    background: $color-highlight-bg;
+    color: $color-highlight;
+}
+
+html { background: $color-bg; }
+
+body {
+    color: $color-primary;
+    font-size: 1.9rem;
+    font-family: Lora, serif;
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: .02rem;
+}
+
+h1, h2, h3, h4 { 
+    margin: 1.5rem 0 1rem 0;
+    + p { margin-top: 1rem; }
+}
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 2.1rem; }
+h4 {
+    font-size: 1.9rem;
+    font-weight: normal;
+}
+
+p { margin: 1.5rem 0; }
+
+sup { line-height: 0; }
+
+a, a:active, a:visited {
+    color: $color-link;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+a:hover { color: $color-primary; }
+
+ol ol { list-style-type: lower-alpha; }
+
+code { white-space: nowrap; }
+
+.table { 
+    overflow-x: auto;
+    margin: 1.5rem auto;
+    table { 
+        margin: 0 auto;
+        text-align: left;
+        border-collapse: collapse;
+        th { background-color: $color-shade; }
+        &.full { width: 100%; }
+        &.borders { 
+            th, td {
+                border: .1rem solid $color-border;
+                padding: 1rem;
+            } 
+        }
+        &.small { font-size: 1.6rem; }
+        &.smallest { font-size: 1.4rem; }
+    }
+}
+
+.footnotes {
+    &::before { content: "Footnotes:"; }
+    clear: both;
+    color: $color-secondary;
+    font-size: 1.4rem;
+}
+
+.return, .advance {
+    cursor: default;
+}
+
+.return {
+    float: left;
+    font-size: 1.6rem;
+}
+
+.advance {
+    float: right;
+    font-size: 1.6rem;
+}
+
+// image captions
+.caption {
+    font-size: 1.4rem;
+    color: $color-secondary;
+    text-align: center;
+}
+
+.cols2, .cols3 { column-gap: 3rem; }
+
+// two-column lists
+.cols2 {
+    column-count: 2;
+    font-size: 1.6rem;
+}
+
+// three-column lists
+.cols3 { 
+    column-count: 3;
+    font-size: 1.4rem;
+}
+
+// color boxes
+.color {
+    display: inline-block;
+    border: .1rem solid $color-border;
+    cursor: default;
+}
+
+.story p {
+    text-align: justify;
+    hyphens: auto;
+    + p { text-indent: 4rem; }
+}
+
+.gallery {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    div {
+        width: min-content;
+        max-width: 150px;
+        margin: .5rem;
+    }
+    a:hover img { opacity: .75; }
+    img {
+        max-height: 150px;
+        max-width: 150px;
+    }
+    p { margin: .1rem 0; }
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    margin: 3rem 0;
+    h2 { margin: .5rem 0 .1rem 0; }
+    p {
+        margin: .5rem 0 1rem 0;
+        &.date {
+            margin-top: .1rem;
+            color: $color-secondary;
+            font-size: 1.6rem;
+        }
+    }
+    img { 
+        margin-right: 2.5rem;
+        width: 125px;
+    }
+    > div {
+        width: 100%;
+    }
+    div div {
+        display: flex;
+        justify-content: right;
+        color: $color-secondary;
+    }
+    &.option {
+        margin: 1.5rem 0;
+        width: fit-content;
+        &:hover img { opacity: .75; }
+        p { margin: 0;}
+        img, &.cropped img {
+            width: 50px;
+            height: 50px;
+            margin-right: 1.5rem;
+        }
+    }
+    &.cropped {
+        img {
+            object-fit: cover;
+            height: 125px;
+            width: 125px;
+        }
+    }
+}

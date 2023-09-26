@@ -1,8 +1,18 @@
 ---
 layout: base
+style: header
 ---
 
+<div class="header" style="background-image: url('/assets/images/{{ page.header }}')">
+    <div>
+        {% if page.header-title %}<h1>{{ page.header-title }}</h1>{% endif %}
+        {% if page.header-subtitle %}<p class="subtitle">{{ page.header-subtitle }}</p>{% endif %}
+    </div>
+</div>
 <div class="content">
+    {% if page.caption %}
+    <div class="caption"><p>{{ page.caption }}</p></div>
+    {% endif %}
     {{ content }}
     {% if page.return-url %}
     <p class="return">

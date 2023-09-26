@@ -17,7 +17,7 @@ The gem should automatically install the following for you if not already:
 You may want to consider reading Jekyll's [official doc on installing themes](https://jekyllrb.com/docs/themes/).
 
 ### RubyGems
-1. Add ```gem "jekyll-theme-schizoid", "~> 2.0.0"``` to your site's Gemfile.
+1. Add ```gem "jekyll-theme-schizoid", "~> 3.0.0"``` to your site's Gemfile.
 1. Run the command ```bundle install``` in your site's directory.
 1. Add ```theme: jekyll-theme-schizoid``` to your site's _config.yaml.
 
@@ -25,12 +25,6 @@ You may want to consider reading Jekyll's [official doc on installing themes](ht
 - responsive design
 - for use with dark themes based off [Material Design 3](https://m3.material.io/)
     - see [their builder on Figma](https://www.figma.com/community/plugin/1034969338659738588/Material-Theme-Builder)
-- no JavaScript, cookies, or trackers
-- basic header and footer menus
-- story pages (with bottom navigation)
-- landing pages
-- supports up to five headings (dynamic spacing)
-- different list types, colour boxes, individual page styles, basic SEO, table classes, functional classes, and various front matter options
 
 ## Docs
 - [official documentation](https://schizoidnightmares.com/docs/jekyll-theme-schizoid/)

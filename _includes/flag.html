@@ -1,0 +1,11 @@
+{% for flag in site.data.flags %}
+{% if include.flag == flag.title %}
+{% if include.size == 'smallest' %}
+<img style="display: inline" src="/assets/vectors/flags/{{ include.flag }}.svg" title="{{ flag.country }}" height=10>
+{% elsif include.size == 'small' %}
+<img style="display: inline" src="/assets/vectors/flags/{{ include.flag }}.svg" title="{{ flag.country }}" height=11>
+{% else %}
+<img style="display: inline" src="/assets/vectors/flags/{{ include.flag }}.svg" title="{{ flag.country }}" height=13>
+{% endif %}
+{% endif %}
+{% endfor %}

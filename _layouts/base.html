@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/style.css">
+        {% if page.style %}
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/{{ page.style }}.css">
+        {% endif %}
+        {% if layout.style %}
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/{{ layout.style }}.css">
+        {% endif %}
+        {% if layout.style-override %}
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/{{ layout.style-override }}.css">
+        {% endif %}
+        <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/responsive.css">
+        <meta charset="UTF-8">
+        {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }} - {{ site.title }}</title>
+    </head>
+    <body>
+        {% if page.container %}
+        <div class="container {{ page.container }}">
+        {% elsif layout.container %}
+        <div class="container {{ layout.container }}">
+        {% else %}
+        <div class="container">
+        {% endif %}
+            <div class="top">
+                <div class="header">
+                    <div class="icon"><a href="{{ site.baseurl }}/" title="Go home"><img src="{{ site.custom_icon }}"></a></div>
+                    <div class="nav">
+                        <ul>
+                            {% assign active-url = page.url | remove_first: "index.html" %}
+                            {% for item in site.data.header %}
+                            {% if active-url == item.url %}
+                            <li class="active">{{ item.title }}</li>
+                            {% else %}
+                            <li><a href="{{ item.url }}"{% if item.external %} target="_blank"{% endif %}>{{ item.title }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                {{ content }}
+            </div>
+            <div class="bottom">
+                <div class="footer">
+                    {% if page.info or layout.info %}
+                    <div class="info">Last modified {{ page.last_modified_at | date: '%B %e, %Y' }}</div>
+                    {% endif %}
+                    <div class="nav">
+                        <ul>
+                            {% assign active-url = page.url %}
+                            {% for item in site.data.footer %}
+                            {% if active-url == item.url %}
+                            <li class="active">{{ item.title }}</li>
+                            {% else %}
+                            <li><a href="{{ item.url }}"{% if item.external %} target="_blank"{% endif %}>{{ item.title }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

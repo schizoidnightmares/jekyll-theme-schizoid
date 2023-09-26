@@ -1,0 +1,33 @@
+---
+---
+@import 'theme.scss';
+
+.container .middle {
+    grid-template-rows: 400px auto; 
+    .header {
+        display: flex;
+        align-items: center;
+        grid-area: 1 / 1 / 2 / 4;
+        background-size: cover;
+        background-color: $color-bg;
+        background-position: center;
+        cursor: default;
+        div {
+            margin: 0 auto;
+            color: $color-link;
+            text-shadow: 0 0 .5rem $color-bg;
+            line-height: 1.2;
+            text-align: center;
+            h1 {
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: .08rem;
+                font-size: 6rem;
+                font-weight: 600;
+                color: $color-link;
+            }
+            p { margin: 0; }
+        }
+    }
+    .content { grid-area: 2 / 2 / 3 / 3; }
+}

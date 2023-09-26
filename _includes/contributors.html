@@ -1,0 +1,16 @@
+<div class="table" markdown=0>
+    <table class="full borders smallest">
+        <tr>
+            <th>Credit</th>
+            <th>Usage</th>
+            <th>Notes</th>
+        </tr>
+        {% for contributor in site.data.contributors %}
+        <tr>
+            <td style="white-space: nowrap">{% if contributor.flag %}{% capture flag %}{{ contributor.flag }}{% endcapture %}{% include flag.html flag=flag size='smallest' %}{% endif %}{% if contributor.url %}<a href="{{ contributor.url }}" target="_blank">{% endif %}{{ contributor.title }}{% if contributor.url %} ⧉</a>{% endif %}</td>
+            <td>{{ contributor.usage }}</td>
+            <td>{{ contributor.notes }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

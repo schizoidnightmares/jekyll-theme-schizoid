@@ -16,30 +16,21 @@ exclude:
   - "*.gem"
   - "*.gemspec"
 
-# jekyll-theme-schizoid config
-theme-schizoid:
-  hideFooter: false
-  hideFooterCredit: false
-
 # default front matter
 defaults:
-  -
-    values:
-      style: style.css
-      showSiteTitle: true
-      showPageTitle: true
-      display_last_modified_at: true
   -
     scope:
       type: pages
     values:
-      layout: page
+      layout: default
+      info: true
   -
     scope:
       type: posts
     values:
       layout: post
-      category: blog
+      info: true
+      category: news
 
 # extras      
 kramdown:
@@ -49,7 +40,7 @@ sass:
   style: compressed
   sourcemap: never
 pagination:
-  enabled: false
+  enabled: true
   per_page: 7
   permalink: /:num/
   title: :title
@@ -58,7 +49,10 @@ feed:
   excerpt_only: true
   posts_limit: 7
 
-# also add the plugins in the .gemspec file if they have a gem
+# jekyll-theme-schizoid
+custom_icon: /assets/images/sn_icon_small.png
+
+# also add the plugins in the Gemfile if they have a gem
 # use gem uninstall to remove unwanted gems
 # run bundle install if adding uninstalled gems
 # to update the Gemfile.lock file, use the command: bundle update
